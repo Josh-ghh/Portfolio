@@ -29,8 +29,8 @@ def remove_list(td_list):
 
 
 def menu():
-     z = True
-     while z == True:
+     
+     while True:
         try:
             pick = int(input("Pick a number for what you'd like to do. 1. Show the list, 2. add to the list, 3. remove an objective, 4. exit"))
             if pick == 1:
@@ -40,8 +40,8 @@ def menu():
             elif pick == 3:
                 remove_list(td_list)
             elif pick == 4:
-                z = False
                 print("exiting")
+                break
             else:
                 print("Invalid option. Please choose 1, 2, 3 or 4.")
         except ValueError:
