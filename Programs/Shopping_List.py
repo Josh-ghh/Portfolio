@@ -18,7 +18,7 @@ def show_list(s_list):
         print(s_list)
 
 def remove_item(s_list):
-try:
+    try:
         amount = int(input("How many items do you want to remove from the list?  "))
         for x in range(amount):
             remove = input(" enter an item to remove ")
@@ -28,8 +28,8 @@ try:
         print("invalid response, exiting list removal")
 
 def menu():
-    z = True
-    while z == True:
+    
+    while True:
         try:
             pick = int(input("Pick a number for what you'd like to do. 1. Show the list, 2. add to the list, 3. remove an item from the list, 4. exit"))
             if pick == 1:
@@ -39,8 +39,8 @@ def menu():
             elif pick == 3:
                     remove_item(s_list)
             elif pick == 4:
-                z = False
                 print("exiting")
+                break
             else:
                 print("Invalid option. Please choose 1, 2, or 3.")
         except ValueError:
