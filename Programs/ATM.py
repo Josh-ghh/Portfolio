@@ -1,10 +1,10 @@
-balance = [ ]
+balance = 0
 
 
 def add(balance):
     try:
         amount = float(input("Enter the amount of money you want to add "))
-        balance.append(amount)
+        balance = balance + amount
         print(balance)
     except ValueError:
         print("invalid response")
@@ -14,7 +14,7 @@ def show_balance(balance):
     if len(balance) == 0:
         print("Your bank account is empty.")
     else:
-        print(balance)
+        print(f"Your balance is" {balance})
 
 
 def withdraw(balance):
@@ -25,7 +25,7 @@ def withdraw(balance):
             amount = float(input("How much do you want to withdraw "))
         else:
             balance =  balance - amount
-            print(balance)
+            print(f"Your balance is" {balance})
     except ValueError:
         print("invalid response, exiting list removal")
 
