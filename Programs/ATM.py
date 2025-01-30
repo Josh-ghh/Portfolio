@@ -14,7 +14,7 @@ def show_balance(balance):
     if len(balance) == 0:
         print("Your bank account is empty.")
     else:
-        print(f"Your balance is" {balance})
+        print(f"Your balance is {balance}")
 
 
 def withdraw(balance):
@@ -25,7 +25,7 @@ def withdraw(balance):
             amount = float(input("How much do you want to withdraw "))
         else:
             balance =  balance - amount
-            print(f"Your balance is" {balance})
+            print(f"Your balance is {balance}")
     except ValueError:
         print("invalid response, exiting list removal")
 
